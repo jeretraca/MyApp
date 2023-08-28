@@ -1,54 +1,34 @@
-import React from "react";
-import DigitalClock from "../src/DigitalClock";
+import React, {Component} from 'react';
 
-
-class Index extends React.Component {
+class Index extends Component {
     static async getInitialProps(){
-        // return ({
-        //     time: new Date().toISOString()
-        // });
-        const promise = new Promise((resolve, reject) => {
-            setInterval(() => {resolve({
-                time: new Date().toISOString()
-            }) }, 3000);
-        });
-        return promise;
-    } 
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            time: props.time
-        }
+        return {};
     }
 
-    tick() {
-        this.setState(() => {
-            return ({
-                time: new Date().toLocaleString()
-            });
-        });
-    }
-
-    componentDidMount() {
-        this.interval = setInterval(() => this.tick(), 1000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
-
-
-    render() {
+    render(){
         return(
-            <>
-            <DigitalClock time={this.state.time} />
-            </>
-        )
+        <div>   
+    
+            <div className="container">
+                <div className="row">
+                    <div className="col margintopbottom">
+                        <h2>Home</h2>
+                        <h6 className="margintopbottom20">
+                            Silicon Valley Code Camp is a community event where
+                            developers learn from fellow developers.
+                        </h6>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+        );
     }
+
 }
 
+
+Index.propTypes = {};
+Index.defaultProps = {};
+
 export default Index;
-
-
-
