@@ -13,7 +13,6 @@ import React, { Component } from 'react'
     );
   }
 }
-SessionCard.propTypes = {};
-SessionCard.defaultProps = {};
+
 
 export default SessionCard;

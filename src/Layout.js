@@ -5,7 +5,7 @@ import Header from "./Header";
 import Menu from "./Menu";
 import Footer from "./Footer";
 
-class Layout extends React.Component {
+class Layout extends Component {
     render(){
         const {children} = this.props
         return (

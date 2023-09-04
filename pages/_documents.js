@@ -6,7 +6,7 @@ You have to include it into the page using either next/head or a custom _documen
 
 import Document, {Head, Main, NextScript} from 'next/document'
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
     render() {
         return (
             <html>
@@ -20,4 +20,6 @@ export default class MyDocument extends Document {
             </html>
         )
     }
-}
+};
+
+export default MyDocument;

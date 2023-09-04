@@ -11,7 +11,4 @@ class Footer extends Component {
   }
 }
 
-Footer.propTypes = {};
-Footer.defaultProps = {};
-
 export default Footer;

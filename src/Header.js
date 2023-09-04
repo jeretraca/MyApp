@@ -21,7 +21,5 @@ class Header extends Component {
   }
 }
 
-Header.propTypes = {};
-Header.defaultProps = {};
 
 export default Header;

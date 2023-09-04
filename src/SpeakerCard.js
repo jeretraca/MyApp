@@ -14,7 +14,6 @@ class SpeakerCard extends Component {
   }
 }
 
-SpeakerCard.propTypes = {};
-SpeakerCard.defaultProps = {};
+
 
 export default SpeakerCard;

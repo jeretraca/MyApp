@@ -1,10 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import axios from "axios";
-import Link from "next/link";
 import SpeakerCard from "../src/SpeakerCard";
 
 
-class Speakers extends React.Component {
+class Speakers extends Component {
     static async getInitialProps(){
         var promise = axios.get('http://localhost:4000/speakers').
         then(response => {

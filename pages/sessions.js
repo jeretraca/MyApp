@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
-import Link from "next/link";
 import SessionCard from '../src/SessionCard';
 
 class Sessions extends Component {
     static async getInitialProps(){
-        var promise = axios.get('http://localhost:4000/sessions').
-        then(response => {
+        var promise = axios.get('http://localhost:4000/sessions').then(response => {
             return {
                 hasErrored: false,
                 sessionData: response.data
@@ -31,6 +28,13 @@ class Sessions extends Component {
             sessionData: props.sessionData
         }
     }
+    componentDidMount() {
+
+    }
+
+    componentWillUnmount() {
+
+    }
 
     render(){
         return (
@@ -50,7 +54,6 @@ class Sessions extends Component {
     }
 }
 
-sessions.propTypes = {};
-sessions.defaultProps = {};
+
 
 export default Sessions;
